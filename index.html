@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menara Hanoi - Edukasi Anak</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🏰 Game Menara Hanoi</h1>
+    <p>Aturan: Pindahkan semua cincin dari <b>Tiang A</b> ke <b>Tiang C</b>.<br>
+    ⚠️ <i>Cincin kecil tidak boleh berada di bawah cincin besar!</i></p>
+
+    <div class="game-container">
+        <!-- Tiang A -->
+        <div class="peg-container" onclick="handlePegClick('A')" id="peg-A">
+            <div class="pole"></div>
+            <div class="base"></div>
+            <div id="rings-A"></div>
+        </div>
+        <!-- Tiang B -->
+        <div class="peg-container" onclick="handlePegClick('B')" id="peg-B">
+            <div class="pole"></div>
+            <div class="base"></div>
+            <div id="rings-B"></div>
+        </div>
+        <!-- Tiang C -->
+        <div class="peg-container" onclick="handlePegClick('C')" id="peg-C">
+            <div class="pole"></div>
+            <div class="base"></div>
+            <div id="rings-C"></div>
+        </div>
+    </div>
+
+    <div class="pegs-labels">
+        <div class="peg-label-box">A</div>
+        <div class="peg-label-box">B</div>
+        <div class="peg-label-box">C</div>
+    </div>
+
+    <div id="message">Silakan klik tiang asal untuk mengambil cincin.</div>
+    <button onclick="resetGame()">Reset Game</button>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
